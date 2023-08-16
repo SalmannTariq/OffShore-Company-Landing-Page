@@ -1,0 +1,295 @@
+$background-color: #f16a23;
+$slider-image-width: 50%;
+$position: absolute;
+$relative: relative;
+$image-brightness: brightness(1.5);
+$star-blue-text-color: #f16a22;
+$breakpoints: (
+  "xs": 0,
+  "sm": 525px,
+  "md": 767px,
+  "lg": 991px,
+  "xl": 1200px,
+);
+@mixin card {
+  border-radius: 12px !important;
+  padding: 1.5rem;
+}
+@mixin border {
+  border-bottom: dotted;
+  border-color: lightgray;
+  border-width: thin;
+}
+@mixin border-onscreensizes {
+  border: none;
+  border-width: 0;
+}
+.first-section {
+  background-image: url("/images/background_Image.svg");
+}
+.navbar {
+  --mdb-navbar-box-shadow: 0px !important;
+  .in-touch-btn {
+    border-radius: 50px !important;
+    background-color: $background-color !important;
+  }
+}
+.about-company-text {
+  font-size: 50px;
+}
+.download-quotes-btn {
+  border-radius: 50px !important;
+  background-color: $background-color !important;
+  .download-img {
+    height: 20px;
+    padding-left: 5px;
+    margin-bottom: 3px;
+  }
+}
+.offshore {
+  border-bottom: 5px solid #ffc70f;
+}
+.slider-images {
+  width: $slider-image-width;
+  @media (max-width: map-get($breakpoints,"md")) {
+    width: 85%;
+  }
+  @media (max-width: map-get($breakpoints,"sm")) {
+    width: 80%;
+  }
+}
+.arrow-btn {
+  width: 7%;
+  position: $position;
+  right: -1%;
+  top: 0%;
+  @media (max-width: map-get($breakpoints,"lg")) {
+    width: 10%;
+    position: $relative;
+    margin-top: 20px;
+    left: 44%;
+  }
+  @media (max-width: map-get($breakpoints,"md")) {
+    width: 13%;
+    position: $relative;
+    margin-top: 20px;
+    left: 44%;
+  }
+  @media (max-width: map-get($breakpoints,"sm")) {
+    width: 20%;
+    position: relative;
+    margin-top: 20px;
+    left: 41%;
+  }
+}
+.card {
+  @include card;
+
+  .rocket {
+    filter: contrast(0.5);
+  }
+}
+.offshore-cards {
+  & :hover {
+    background-color: #ffbc0f !important;
+    color: white !important;
+    border: none !important;
+    .rocket {
+      filter: $image-brightness;
+    }
+    .earth {
+      filter: $image-brightness;
+    }
+  }
+}
+.star-blue {
+  color: $star-blue-text-color;
+}
+.shape {
+  @include border;
+  @media (max-width: map-get($breakpoints,"lg")) {
+    @include border-onscreensizes;
+  }
+}
+.labo {
+  border-left: dotted;
+  border-right: dotted;
+  @include border;
+  .labo-line {
+    background-color: $background-color;
+    height: 7px;
+    width: 4.5rem;
+    margin-top: -13px;
+    margin-left: 2px;
+    @media (max-width: map-get($breakpoints,"lg")) {
+      position: $relative;
+      transform: translate(50%, 0%);
+      left: 41.5%;
+      z-index: -1;
+    }
+    @media (max-width: map-get($breakpoints,"md")) {
+      position: $relative;
+      transform: translate(50%, 0%);
+      left: 38%;
+      z-index: -1;
+    }
+    @media (max-width: map-get($breakpoints,"sm")) {
+      display: none;
+    }
+  }
+  @media (max-width: map-get($breakpoints,"lg")) {
+    @include border-onscreensizes;
+  }
+}
+.project {
+  @include border;
+  .project-line {
+    background-color: #ffc70f;
+    height: 7px;
+    width: 11rem;
+    margin-top: -13px;
+    margin-left: 1px;
+    @media (max-width: map-get($breakpoints,"lg")) {
+      position: $relative;
+      transform: translate(50%, 0%);
+      left: 27.5%;
+      z-index: -1;
+    }
+    @media (max-width: map-get($breakpoints,"md")) {
+      position: $relative;
+      transform: translate(50%, 0%);
+      left: 19.5%;
+      z-index: -1;
+    }
+    @media (max-width: map-get($breakpoints,"sm")) {
+      display: none;
+    }
+  }
+  @media (max-width: map-get($breakpoints,"lg")) {
+    @include border-onscreensizes;
+  }
+}
+.characteristic {
+  border-right: dotted;
+  border-color: lightgray;
+  border-width: thin;
+  @media (max-width: map-get($breakpoints,"lg")) {
+    border: none;
+  }
+}
+.btn {
+  --mdb-btn-box-shadow: 0px !important;
+}
+.btn-outline {
+  border: 1px solid #f16a22 !important;
+  color: #f16a22 !important;
+}
+.services {
+  background-color: #f16a22;
+  background-image: url("Group 46.svg");
+  background-repeat: no-repeat;
+  .cards-4 {
+    position: $position;
+    right: 0;
+    top: 0;
+    @media (max-width: map-get($breakpoints,"lg")) {
+      position: $relative;
+    }
+  }
+  .text-color {
+    color: #f16a22;
+  }
+  .blockchain {
+    margin-top: 25px !important;
+  }
+  .application {
+    margin-top: -70px;
+    @media (max-width: map-get($breakpoints,"lg")) {
+      margin-top: 4%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: map-get($breakpoints,"sm")) {
+      margin-top: 6%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .AI {
+    margin-top: 30px !important;
+    @media (max-width: map-get($breakpoints,"lg")) {
+      margin-top: 4% !important;
+    }
+    @media (max-width: map-get($breakpoints,"sm")) {
+      margin-top: 6% !important;
+    }
+  }
+  @media (max-width: map-get($breakpoints,"lg")) {
+    .system {
+      display: grid;
+      justify-content: center;
+    }
+  }
+}
+.videoo {
+  border-radius: 20px;
+}
+.contact-section {
+  background-color: #ffbc0f;
+  .get-text {
+    color: #ffbc0f !important;
+  }
+}
+.contact-text {
+  color: #f16a23;
+}
+.download-cards {
+  .download-btn {
+    border-radius: 50px !important;
+    background-color: #f16a23 !important;
+  }
+  .quotation-img {
+    filter: contrast(0.5);
+  }
+}
+.download-cards {
+  &:hover {
+    background-color: #ffbc0f !important;
+    color: white !important;
+    border: none !important;
+    .download-btn {
+      color: #ffc70f !important;
+      background-color: white !important;
+    }
+    .quotation-img {
+      filter: brightness(1.5);
+    }
+    .download-image {
+      filter: brightness(1.5);
+    }
+  }
+}
+.social-icons {
+  color: white;
+}
+.footer-icons {
+  gap: 50px;
+}
+.icons-footer {
+  background-color: #cecece !important;
+}
+// Media Queries
+@media (max-width: map-get($breakpoints,"lg")) {
+  .GAP {
+    gap: 20px;
+  }
+  .lists {
+    list-style: none;
+    text-align: center;
+  }
+}
+@media (max-width: map-get($breakpoints,"md")) {
+  .GAP {
+    gap: 20px;
+  }
+}
